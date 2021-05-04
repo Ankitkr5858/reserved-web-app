@@ -1,0 +1,21 @@
+<div class="container"> <br>
+    <div class="row">
+        <div *ngFor="let article of articles" class="card col-md-6 card-info">
+            <div class="row">
+                <div class="col-sm-1.5">
+                    <img src="{{article.author_photo}}" alt="author-profile" class="author-profile" style="border-radius: 50%; padding: 5px;" width="50" height="50">
+                </div>
+                <div class="col-sm-2.5">
+                    <h5 class="author-name font-weight-bold text-center" style="margin-top: 15%; padding: 5px;">{{article.author_name}}</h5>
+                </div>
+            </div>
+            <img id="content-image" src="{{article.image}}" style="padding: 5px;" alt="content-image" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title font-weight-bold">{{article.title}}</h5>
+                <p class="card-text">{{article.content}}</p>
+                <h5 class="float-left">Get in touch: <a href="mailto:{{article.author_email}}" style="text-decoration: none;">{{article.author_email}}</a></h5> <br>
+                <h6 class="float-right font-italic">{{article.creation_date}}</h6>
+            </div>
+        </div>
+    </div>
+</div>

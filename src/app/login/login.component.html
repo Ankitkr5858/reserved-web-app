@@ -1,0 +1,22 @@
+<!-- login modal for authenticated users! -->
+<div class="back">
+    <div class="div-center">
+        <div class="content">
+            <h3 class="text-center">Login</h3>
+            <hr>
+            <form action="submit">
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" name="email" [(ngModel)]="email" class="form-control" id="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" [(ngModel)]="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <button (click)="login()" type="submit" class="btn text-white">Login</button>
+                <hr>
+                <a routerLink="/sign-up" style="text-decoration: none;"><h4 class="text-muted text-center">Don't have an account? Signup</h4></a>
+            </form>
+        </div>
+    </div>
+</div>

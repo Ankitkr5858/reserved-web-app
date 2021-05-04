@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "mywikiweb-d6454": {
+      "hosting": {
+        "MyWiki-Web": [
+          "mywikiweb-d6454"
+        ]
+      }
+    }
+  }
+}

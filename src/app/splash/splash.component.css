@@ -1,0 +1,20 @@
+/* body {
+    height: 100%;
+    background-color: blueviolet;
+} */
+/* 
+.splash {
+    height: 720px;
+    background-color: blueviolet;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+.logo-text {
+    font-family: 'Acme', sans-serif;
+    font-size: 48px;
+}
+
+.splash {
+    margin-top: 15%;
+}

@@ -1,0 +1,47 @@
+<div class="container">
+  <div *ngIf="imageList" class="row">
+    <div *ngFor="let i of rowIndexArray" class="card col-md-6 card-info">
+      <div class="row">
+        <div class="" *ngIf="i!=0">
+          <div class="col-sm-1.5">
+            <img [src]="imageList[3*i-1].authorUrl" class="img-fluid">
+          </div>
+          <!-- <div class="col-sm-2.5"> -->
+          <!-- </div> -->
+          <!-- <img [src]="imageList[3*i-1].imageUrl" class="img-fluid"> -->
+          <span class="imagebox-desc">
+            <h5 class="card-title font-weight-bold">{{imageList[3*i-1].title}}</h5>
+            <p class="card-text text-center">{{imageList[3*i-1].caption}}</p>
+            <h5 class="float-left">Get in touch: <a href="mailto:{{imageList[3*i-1].author_email}}" style="text-decoration: none;">{{imageList[3*i-1].author_email}}</a></h5> <br>
+            <h5 class="author-name font-weight-bold float-right">Author: {{imageList[3*i-1].author}}</h5>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <table *ngIf="imageList">
+    <tr *ngFor="let i of rowIndexArray">
+      <td>
+        <div class="imagebox" *ngIf="i!=0">
+          <img [src]="imageList[3*i-1].imageUrl" class="img-fluid">
+          <span class="imagebox-desc">{{imageList[3*i-1].caption}}</span>
+        </div>
+      </td>
+      <td *ngIf="imageList[3*i]">
+        <div class="imagebox">
+          <img [src]="imageList[3*i].imageUrl" class="img-fluid">
+          <span class="imagebox-desc">{{imageList[3*i].caption}}</span>
+        </div>
+      </td>
+      <td *ngIf="imageList[3*i+1]">
+        <div class="imagebox">
+          <img [src]="imageList[3*i+1].imageUrl" class="img-fluid">
+          <span class="imagebox-desc">{{imageList[3*i+1].caption}}</span>
+        </div>
+      </td>
+    </tr>
+</table> -->
+
+
+
+</div>

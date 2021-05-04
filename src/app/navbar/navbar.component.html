@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+    <a routerLink="splash" class="navbar-brand" href="">MyWiki</a>
+    <div *ngIf="current_user">
+        <ul class="navbar-nav ml-auto" >
+            <li class="nav-item">
+                <a class="nav-link" routerLink="explore">Explore</a>
+            </li>
+
+            <li class="nav-item">
+                <a routerLink="image/list" class="nav-link">Posts</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" routerLink="image/upload">Upload</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" (click)="logout()">Logout</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <div *ngIf="!current_user">
+
+        <ul class="navbar-nav ml-auto" >
+            <li class="nav-item">
+                <a class="nav-link" routerLink="explore">Explore</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="upload">Upload</a>
+            </li>
+
+    
+            <li class="nav-item">
+                <a class="nav-link" routerLink="login">Login</a>
+            </li>   
+            <li class="nav-item">
+                <a class="nav-link" routerLink="sign-up">Sign Up</a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+<!-- /image/list -->

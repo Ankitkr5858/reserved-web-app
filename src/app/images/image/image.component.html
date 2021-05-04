@@ -1,0 +1,60 @@
+<div class="card" style="width: 50rem;">
+    <div class="card-body">
+        <form [formGroup]="formTemplate" (submit)="onSubmit(formTemplate.value)">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="">Select profile picture to upload</label>
+                        <input type="file" accept="image/*" class="form-control" #fileuploader formControlName="authorUrl" (change)="showPreview2($event)">
+                        <div class="text-danger" *ngIf="isSubmitted && formControls.imageUrl.errors?.required">This field is required.</div>
+                    </div>
+                </div>
+                <!-- <div class="">
+                    <div class="float-right">
+                        <img [src]="img_src" style="visibility: hidden;" width="100px" height="100px" (click)="fileuploader.click()">
+                    </div>
+                </div> -->
+            </div> <br>
+            <div class="form-group">
+                <input class="form-control" formControlName="author" placeholder="Author name">
+                <div class="text-danger" *ngIf="isSubmitted && formControls.author.errors?.required">This field is required.</div>
+            </div>
+            <!-- <div class="text-center">
+                <img [src]="imgSrc" width="350px" height="250px" (click)="fileuploader.click()">
+            </div> -->
+            <div class="form-group">
+                <label for="">Select content file to upload</label>
+                <input type="file" accept="image/*" class="form-control" #fileuploader formControlName="imageUrl" (change)="showPreview($event)">
+                <div class="text-danger" *ngIf="isSubmitted && formControls.imageUrl.errors?.required">This field is required.</div>
+            </div>
+            <div class="form-group">
+                <input class="form-control" formControlName="title" placeholder="Title">
+                <div class="text-danger" *ngIf="isSubmitted && formControls.caption.errors?.required">This field is required.</div>
+            </div>
+            <div class="form-group">
+                <input class="form-control" formControlName="caption" placeholder="Content">
+                <div class="text-danger" *ngIf="isSubmitted && formControls.caption.errors?.required">This field is required.</div>
+            </div>
+            <div class="form-group">
+                <input class="form-control" formControlName="author_email" placeholder="Email">
+                <div class="text-danger" *ngIf="isSubmitted && formControls.caption.errors?.required">This field is required.</div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <a routerLink="/image/list" class="btn btn-primary btn-block float-right">Go to Gallery</a> 
+                 </div>
+                 <div class="form-group col-md-6">
+                     <a> <button class="btn btn-primary btn-block float-right" type="submit">Post</button>
+                     </a>
+                 </div>
+            </div>
+            
+        </form>
+    </div>
+</div>
+
+<!-- caption: '',
+imageUrl: '',
+author: '',
+author_email: '',
+authorUrl: '' -->
